@@ -1,9 +1,14 @@
 [package]
 name = "utopia-system"
-description = "Process environment helpers with Utopia (PHP) semantics."
+description = "Environment variables and machine facts (OS, architecture, CPU, memory, disk, IO, network) with utopia-php/system semantics."
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.88"
 license = "BSD-3-Clause"
 
 [dependencies]
+indexmap = "2"
+php-std = { version = "0.1.0", git = "https://github.com/utopia-rs/php-std" }
+rustix = { version = "1", default-features = false, features = ["std", "fs", "system"] }
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "signal"] }
