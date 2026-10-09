@@ -1,0 +1,9 @@
+[package]
+name = "utopia-system"
+description = "Process environment helpers with Utopia (PHP) semantics."
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "BSD-3-Clause"
+
+[dependencies]
